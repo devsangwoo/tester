@@ -46,6 +46,7 @@
   margin: 0 auto;
   padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-align: left;
 }
 
 .tab-buttons {
@@ -77,14 +78,14 @@
 }
 
 .card-area {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .card {
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 24px;
+  padding: 20px;
 }
 
 .card-header {
@@ -97,146 +98,117 @@
 }
 
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
   margin: 0;
-  flex: 1;
-  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .random-btn {
-  background: #f0f0f0;
+  background: #4a90e2;
+  color: white;
   border: none;
-  border-radius: 8px;
   padding: 8px 16px;
-  font-size: 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  font-size: 0.9rem;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .random-btn:hover {
-  background: #e0e0e0;
-}
-
-.part2-block, .part3-block {
-  margin-bottom: 24px;
+  background: #357abd;
 }
 
 .main-question {
-  font-size: 1.2rem;
-  color: #444;
-  margin-bottom: 16px;
-  line-height: 1.5;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 10px;
+  text-align: left;
 }
 
 .main-question span {
-  flex: 1;
-  min-width: 0;
-}
-
-.tts-btn {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 4px;
-  color: #666;
-  transition: color 0.2s;
-  flex-shrink: 0;
-}
-
-.tts-btn:hover {
-  color: #333;
+  font-weight: bold;
+  white-space: normal;
 }
 
 .details {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 
 .details li {
-  padding: 8px 0;
-  color: #555;
-  border-bottom: 1px solid #eee;
-  word-break: keep-all;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+  word-break: break-word;
+  text-align: left;
+}
+
+.details li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+}
+
+.nav-buttons {
   display: flex;
-  align-items: center;
   gap: 12px;
+  margin-top: 20px;
 }
 
-.details li span {
-  flex: 1;
-}
-
-.details li:last-child {
-  border-bottom: none;
-}
-
-.nav-btns {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-}
-
-.nav-btns button {
-  background: #007bff;
+.nav-btn {
+  background: #4a90e2;
   color: white;
   border: none;
-  border-radius: 8px;
   padding: 10px 20px;
-  font-size: 1rem;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 1rem;
+  flex: 1;
   transition: background-color 0.2s;
 }
 
-.nav-btns button:hover {
-  background: #0056b3;
+.nav-btn:hover {
+  background: #357abd;
 }
 
 .footer {
   text-align: center;
+  margin-top: 40px;
   color: #666;
   font-size: 0.9rem;
-  margin-top: 40px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .ielts-app {
-    padding: 12px;
-  }
-
-  .tab-buttons {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .tab-btn {
-    width: 100%;
+    padding: 15px;
+    text-align: left;
   }
 
   .card {
-    padding: 16px;
+    padding: 15px;
+    text-align: left;
   }
 
   .card-header {
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
+    text-align: left;
   }
 
   .card-title {
-    font-size: 1.3rem;
-    text-align: center;
+    text-align: left;
+    white-space: normal;
   }
 
   .random-btn {
@@ -244,18 +216,28 @@
   }
 
   .main-question {
-    font-size: 1.1rem;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
-  .main-question span {
-    margin-bottom: 8px;
+  .details li {
+    text-align: left;
   }
 
-  .nav-btns button {
-    padding: 8px 16px;
+  .tab-buttons {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-btn {
     width: 100%;
   }
 }
